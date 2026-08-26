@@ -1,0 +1,661 @@
+/* ============================= */
+/* CONFIGURAÇÕES GERAIS          */
+/* ============================= */
+
+*{
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    background: #080808;
+    color: #f4ead3;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background-image:
+        radial-gradient(
+            rgba(255,255,255,0.03) 1px,
+            transparent 1px
+        );
+
+    background-size: 5px 5px;
+}
+
+
+/* ============================= */
+/* CABEÇALHO                     */
+/* ============================= */
+
+.topo{
+    height: 100px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 20px 50px;
+
+    border-bottom: 3px solid #f0c75e;
+
+    background: #050505;
+}
+
+
+/* EDIÇÃO */
+
+.edicao{
+    width: 100px;
+
+    text-align: center;
+
+    font-weight: bold;
+
+    color: #111;
+
+    background: #f0c75e;
+
+    padding: 10px;
+
+    transform: rotate(-2deg);
+}
+
+.edicao strong{
+    font-size: 32px;
+}
+
+.edicao small{
+    font-size: 12px;
+}
+
+
+/* MENU */
+
+nav{
+    margin-left: auto;
+
+    display: flex;
+    gap: 50px;
+}
+
+nav a{
+    color: #f4ead3;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    font-size: 17px;
+
+    transition: 0.4s;
+}
+
+nav a:hover{
+    color: #f0c75e;
+
+    text-shadow:
+        0 0 10px #f0c75e;
+}
+
+
+/* ============================= */
+/* CAPA                          */
+/* ============================= */
+
+.capa{
+    position: relative;
+
+    min-height: 470px;
+
+    padding: 70px 100px;
+
+    border-bottom: 4px solid #f0c75e;
+
+    background:
+        linear-gradient(
+            135deg,
+            #111827,
+            #050505
+        );
+
+    overflow: hidden;
+}
+
+
+/* efeito de linhas */
+
+.capa::before{
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        repeating-linear-gradient(
+            120deg,
+            transparent,
+            transparent 25px,
+            rgba(255,255,255,0.025) 26px
+        );
+
+    pointer-events: none;
+}
+
+
+/* NOME */
+
+.nome{
+    display: inline-block;
+
+    background: #f0c75e;
+
+    color: #111;
+
+    padding: 12px 25px;
+
+    font-size: 25px;
+
+    font-weight: 900;
+
+    transform: rotate(-2deg);
+}
+
+
+/* TÍTULO */
+
+.titulo h1{
+    margin: 25px 0;
+
+    font-size: 85px;
+
+    line-height: 0.85;
+
+    letter-spacing: -3px;
+
+    color: #f4ead3;
+
+    text-shadow:
+        6px 6px 0 #111;
+}
+
+.titulo h1 strong{
+    color: #f0c75e;
+}
+
+
+/* SUBTÍTULO */
+
+.subtitulo{
+    display: inline-block;
+
+    background: #f4ead3;
+
+    color: #111;
+
+    padding: 15px 25px;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    transform: rotate(-1deg);
+}
+
+
+/* ============================= */
+/* BALÕES                        */
+/* ============================= */
+
+.fala,
+.explorar{
+
+    position: absolute;
+
+    padding: 25px;
+
+    color: #111;
+
+    font-weight: 900;
+
+    text-align: center;
+
+    border-radius: 50%;
+
+    border: 4px solid #111;
+
+    box-shadow:
+        6px 6px 0 #f0c75e;
+}
+
+
+/* fala */
+
+.fala{
+    right: 150px;
+    top: 100px;
+
+    width: 230px;
+
+    background: #f4ead3;
+
+    transform: rotate(5deg);
+}
+
+
+/* explorar */
+
+.explorar{
+    right: 100px;
+    bottom: 70px;
+
+    width: 220px;
+
+    background: #f0c75e;
+
+    transform: rotate(-5deg);
+}
+
+
+/* ============================= */
+/* TÍTULO DOS PROJETOS            */
+/* ============================= */
+
+#projetos{
+    padding: 60px 50px;
+}
+
+.titulo-secao{
+
+    text-align: center;
+
+    font-size: 40px;
+
+    color: #f0c75e;
+
+    margin-bottom: 60px;
+
+    text-shadow:
+        3px 3px 0 #111;
+}
+
+
+/* ============================= */
+/* GRID                          */
+/* ============================= */
+
+.projetos{
+
+    width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 40px;
+}
+
+
+/* ============================= */
+/* CARD                          */
+/* ============================= */
+
+.projeto{
+
+    position: relative;
+
+    padding: 25px;
+
+    background: #111;
+
+    border: 4px solid #f4ead3;
+
+    box-shadow:
+        10px 10px 0 #000;
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+
+    overflow: hidden;
+}
+
+
+/* hover do card */
+
+.projeto:hover{
+
+    transform:
+        translateY(-10px)
+        rotate(-1deg);
+
+    box-shadow:
+        15px 15px 0 #000,
+        0 0 30px rgba(240,199,94,0.35);
+}
+
+
+/* ============================= */
+/* NÚMERO                        */
+/* ============================= */
+
+.numero{
+
+    position: absolute;
+
+    top: -10px;
+    left: -10px;
+
+    padding: 10px 20px;
+
+    font-size: 30px;
+
+    font-weight: 900;
+
+    color: #111;
+
+    background: #f0c75e;
+
+    transform: rotate(-5deg);
+
+    z-index: 2;
+}
+
+
+/* ============================= */
+/* TÍTULO DO PROJETO             */
+/* ============================= */
+
+.projeto h2{
+
+    display: inline-block;
+
+    margin: 5px 0 25px 50px;
+
+    padding: 8px 25px;
+
+    color: #111;
+
+    font-size: 25px;
+
+    transform: rotate(-1deg);
+}
+
+
+/* cores dos títulos */
+
+.projeto-amarelo h2{
+    background: #f0c75e;
+}
+
+.projeto-azul h2{
+    background: #3698d4;
+}
+
+.projeto-vermelho h2{
+    background: #e94b35;
+}
+
+.projeto-verde h2{
+    background: #8ac926;
+}
+
+
+/* ============================= */
+/* IMAGEM                        */
+/* ============================= */
+
+.quadro{
+
+    position: relative;
+
+    padding: 10px;
+
+    background: #050505;
+
+    border: 5px solid #f0c75e;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.5s ease,
+        box-shadow 0.5s ease;
+}
+
+
+.quadro img{
+
+    width: 100%;
+
+    height: 250px;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition:
+        transform 0.6s ease;
+}
+
+
+/* hover imagem */
+
+.projeto:hover .quadro{
+
+    transform:
+        scale(1.02)
+        rotate(0.5deg);
+
+    box-shadow:
+        0 0 25px rgba(240,199,94,0.6);
+}
+
+.projeto:hover .quadro img{
+
+    transform: scale(1.04);
+}
+
+
+/* ============================= */
+/* ONOMATOPEIA                   */
+/* ============================= */
+
+.onomatopeia{
+
+    position: absolute;
+
+    right: 10px;
+
+    margin-top: -35px;
+
+    padding: 10px 18px;
+
+    font-size: 25px;
+
+    font-weight: 900;
+
+    color: #111;
+
+    background: #f0c75e;
+
+    border: 4px solid #111;
+
+    transform: rotate(-8deg);
+
+    z-index: 3;
+}
+
+
+/* ============================= */
+/* DESCRIÇÃO                     */
+/* ============================= */
+
+.descricao{
+
+    padding-top: 20px;
+
+    color: #f4ead3;
+
+    font-size: 17px;
+
+    line-height: 1.5;
+}
+
+
+/* ============================= */
+/* TECNOLOGIAS                   */
+/* ============================= */
+
+.tecnologias{
+
+    margin-top: 20px;
+
+    font-weight: bold;
+
+    font-size: 14px;
+}
+
+.tecnologias span{
+
+    display: inline-block;
+
+    margin-left: 6px;
+
+    padding: 5px 8px;
+
+    color: #111;
+
+    background: #f4ead3;
+
+    border: 2px solid #111;
+
+    font-size: 12px;
+}
+
+
+/* ============================= */
+/* BOTÃO                         */
+/* ============================= */
+
+.descricao a{
+
+    display: inline-block;
+
+    margin-top: 25px;
+
+    padding: 13px 25px;
+
+    background: #f0c75e;
+
+    color: #111;
+
+    text-decoration: none;
+
+    font-weight: 900;
+
+    border: 3px solid #111;
+
+    box-shadow:
+        5px 5px 0 #111;
+
+    transition:
+        background-color 0.5s ease,
+        transform 0.3s ease,
+        box-shadow 0.4s ease;
+}
+
+
+.descricao a:hover{
+
+    background: #fff1a8;
+
+    transform:
+        translate(3px, 3px);
+
+    box-shadow:
+        2px 2px 0 #111;
+}
+
+
+/* ============================= */
+/* RODAPÉ                        */
+/* ============================= */
+
+footer{
+
+    margin-top: 60px;
+
+    padding: 50px;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr 1fr;
+
+    gap: 30px;
+
+    border-top: 4px solid #f0c75e;
+
+    background: #050505;
+}
+
+
+/* fala final */
+
+.fala-final{
+
+    padding: 25px;
+
+    background: #f4ead3;
+
+    color: #111;
+
+    font-weight: 900;
+
+    text-align: center;
+
+    transform: rotate(-2deg);
+}
+
+
+/* frase */
+
+.frase-final{
+
+    padding: 25px;
+
+    background: #f0c75e;
+
+    color: #111;
+
+    font-size: 30px;
+
+    font-weight: 900;
+
+    text-align: center;
+
+    transform: rotate(2deg);
+}
+
+
+/* redes */
+
+.redes{
+
+    padding: 10px 20px;
+
+    color: #f4ead3;
+}
+
+.redes h3{
+
+    color: #f0c75e;
+
+    font-size: 20px;
+}
